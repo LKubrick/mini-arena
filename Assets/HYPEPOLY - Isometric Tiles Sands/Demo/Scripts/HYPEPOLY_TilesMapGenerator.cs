@@ -1264,40 +1264,36 @@ public class HYPEPOLY_TilesMapGenerator : MonoBehaviour
     }
     bool[,] CreateHoles(bool[,] curentMap, int _x, int _z, int maxSize, int iteration)
     {
-        if (!curentMap[_x, _z])
+        if (curentMap[_x, _z]) return curentMap;
+        curentMap[_x, _z] = true;
+
+        float chanceForAdditionalHole = 100f;
+
+        int anywayHoles = Mathf.FloorToInt((float)maxSize / 1.25f);
+
+        if (iteration > anywayHoles)
         {
-            curentMap[_x, _z] = true;
+            chanceForAdditionalHole = 100f - ((100f / (float)(maxSize - anywayHoles)) * ((float)(iteration - anywayHoles)));
+        }
 
-            float chanceForAdditionalHole = 100f;
+        iteration++;
 
-            int anywayHoles = Mathf.FloorToInt((float)maxSize / 1.25f);
-
-            if (iteration > anywayHoles)
-            {
-                chanceForAdditionalHole = 100f - ((100f / (float)(maxSize - anywayHoles)) * ((float)(iteration - anywayHoles)));
-            }
-
-            iteration++;
-
-            if (iteration < maxSize)
-            {
-                if (_z - 1 > 0 && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
-                {
-                    curentMap = CreateHoles(curentMap, _x, _z - 1, maxSize, iteration);
-                }
-                if (_z + 1 < curentMap.GetLength(1) && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
-                {
-                    curentMap = CreateHoles(curentMap, _x, _z + 1, maxSize, iteration);
-                }
-                if (_x - 1 > 0 && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
-                {
-                    curentMap = CreateHoles(curentMap, _x - 1, _z, maxSize, iteration);
-                }
-                if (_x + 1 < curentMap.GetLength(0) && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
-                {
-                    curentMap = CreateHoles(curentMap, _x + 1, _z, maxSize, iteration);
-                }
-            }
+        if (iteration >= maxSize) return curentMap;
+        if (_z - 1 > 0 && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
+        {
+            curentMap = CreateHoles(curentMap, _x, _z - 1, maxSize, iteration);
+        }
+        if (_z + 1 < curentMap.GetLength(1) && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
+        {
+            curentMap = CreateHoles(curentMap, _x, _z + 1, maxSize, iteration);
+        }
+        if (_x - 1 > 0 && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
+        {
+            curentMap = CreateHoles(curentMap, _x - 1, _z, maxSize, iteration);
+        }
+        if (_x + 1 < curentMap.GetLength(0) && Random.Range(0, 100) < (chanceForAdditionalHole * Random.Range(0.75f, 1f)))
+        {
+            curentMap = CreateHoles(curentMap, _x + 1, _z, maxSize, iteration);
         }
 
         return curentMap;
