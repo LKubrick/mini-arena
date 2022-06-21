@@ -10608,7 +10608,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  RunSpeed: 8
+  RunSpeed: 16
   AutoRun: 0
   AutoRunThreshold: 0.6
 --- !u!114 &114218547530737672
@@ -10634,7 +10634,7 @@ MonoBehaviour:
   JumpProportionalToPress: 1
   MinimumPressTime: 0.4
   JumpForce: 800
-  JumpHeight: 4
+  JumpHeight: 8
   CanJumpOnTooSteepSlopes: 1
   ResetJumpsOnTooSteepSlopes: 0
   NumberOfJumps: 1

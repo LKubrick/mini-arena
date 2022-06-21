@@ -14,10 +14,9 @@ Material:
   - _NORMAL_MAP_ON
   - _USEINTERSECTIONFOAM_ON
   m_InvalidKeywords:
-  - _ENABLEDEPTHTEXTURE_ON
-  - _ENABLE_VC_ON
   - _USE_VC_INTERSECTION_ON
   - _WORLDSPACETILIBG_ON
+  - _WORLDSPACETILING_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -70,9 +69,9 @@ Material:
     - _Depthdarkness: 0
     - _ENABLE_GRADIENT: 0
     - _ENABLE_SHADOWS: 0
-    - _ENABLE_VC: 1
+    - _ENABLE_VC: 0
     - _EdgeFade: 1.84
-    - _EnableDepthTexture: 1
+    - _EnableDepthTexture: 0
     - _FoamDistortion: 0.45
     - _FoamOpacity: 0.3
     - _FoamSize: 0
@@ -118,7 +117,7 @@ Material:
     - _Wavesspeed: 0.6
     - _Wavesstrength: 0.031
     - _Wavetint: -0.077
-    - _Worldspacetiling: 0
+    - _Worldspacetiling: 1
     - __dirty: 1
     m_Colors:
     - _FresnelColor: {r: 0.5, g: 0.8551724, b: 1, a: 0.084}

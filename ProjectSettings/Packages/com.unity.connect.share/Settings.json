@@ -21,7 +21,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/Mini Arena - Biomes - 00/3Biomes-MiniArena-00;/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/Mini Arena - Biomes - 00/BigSand-WebGL-Web3;/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/BigSand-WebGL-Web3;/Users/lorenzocarly/Documents/GitHub/mini-arena/WebGL Builds;;;;;;\"}"
+                "value": "{\"m_Value\":\"/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/Demo-WebGL-00;/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/Mini Arena - Biomes - 00/3Biomes-MiniArena-00;/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/Mini Arena - Biomes - 00/BigSand-WebGL-Web3;/Users/lorenzocarly/Documents/GitHub/mini-arena-builds/BigSand-WebGL-Web3;/Users/lorenzocarly/Documents/GitHub/mini-arena/WebGL Builds;;;;;\"}"
             }
         ]
     }
